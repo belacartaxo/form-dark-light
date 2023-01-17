@@ -1,6 +1,17 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+    --color-light-50:#f8fafc;
+    --color-dark-50:#797984;
+    --color-dark-100:#312d37;
+    --color-dark-900:#000;
+    --color-purple-50:#7c3aed;
+    --color-purple-100:#a855f7;
+    --color-purple-200:#bf46ef;
+
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200))
+}
 *{
     padding: 0;
     margin: 0;
@@ -13,18 +24,133 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(235deg, #ab80e7 0, #8f6cd8 50%, #7259c9 100%);
-    color: whitesmoke;
+    background: var(--color-gradient);
+    color: var(--color-dark-100);
+    font-size: 14px;
 }
 
 section{
     padding: 20px;
-    background-color: rgb(53, 52, 54);
+    background-color: var(--color-light-50);
     width: 300px;
-    height: 400px;
+    height: 410px;
     border-radius: 6px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.358);
+    animation: dark-to-light 0.3s ease-in-out;
 }
 
 section div h1 {
     font-size: 30px;
+    position: relative;
+}
+
+section div h1::before{
+    content: '';
+    position: absolute;
+    background-color: var(--color-purple-50);
+    width: 40%;
+    height: 3px;
+    bottom: 8px;
+}
+
+#theme-icon{
+    margin: 13px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#form-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#social-media{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+#social-media img:hover{
+    transform: scale(1.2);
+}
+
+section form div.input-box div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-purple-50);
+    cursor: text;
+}
+
+section form div input{
+    background-color: transparent;
+    border: none;
+    height: 28px;
+    width: 92%;
+}
+
+
+section form div input:focus{
+    outline: none;
+}
+
+section form a{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--color-purple-50);
+}
+
+section form a:hover{
+    text-decoration: underline;
+    color: var(--color-purple-100);
+}
+
+section form #button{
+    margin-top: 20px;
+    width: 100%;
+    height: 33px;
+    border-style: none;
+    background: var(--color-gradient);
+    color: var(--color-light-50);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+section form input#button:hover{
+    transition: ease-out 0.5s;
+    box-shadow: inset 400px 0 0 0 var(--color-purple-50); 
+}
+
+section.dark {
+    background-color: var(--color-dark-100);
+    color: var(--color-dark-50);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+section.dark h1{
+    color: var(--color-light-50);
+}
+
+section.dark label input{
+    color: var(--color-light-50);
+}
+
+section.dark .fa-solid{
+    color: white;
+}
+
+section.dark a{
+    color: var(--color-light-50);
+}
+
+
+@keyframes dark-to-light{
+    0%{background-color: var(--color-dark-100);}
+    100%{background-color: var(--color-light-50);}
+}
+
+@keyframes light-to-dark{
+    0%{background-color: var(--color-light-50);}
+    100%{background-color: var(--color-dark-100);}
 }

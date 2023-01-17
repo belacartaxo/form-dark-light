@@ -5,32 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Login dark and light</title>
 </head>
 <body>
     <section>
-        <div>
+        <div id="form-header">
             <h1>Login</h1>
-            <!--icone tema-->
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
         </div>
-        <div id="social-icons">
-
+        <div id="social-media">
+            <a href="#"><img src="assets/img/facebook-icon.png" alt="Facebook icon"></a>
+            <a href="#"><img src="assets/img/google-icon.png" alt="Google icon"></a>
+            <a href="#"><img src="assets/img/github-icon.png" alt="GitHub icon"></a>
         </div>
         <form action="#" method="post">
-            <div>
-                <label for="name">Name</label>
-                <input type="text" id="name">
+            <div class="input-box">
+                <label for="name">
+                    Name
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name">
+                    </div>
+                </label>
             </div>
-            <div>
-                <label for="email">E-mail</label>
-                <input type="text" id="email">
+            <div class="input-box">
+                <label for="email">
+                    E-mail
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" id="email">
+                    </div>
+                </label>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="text" id="password">
+            <div class="input-box">
+                <label for="password">
+                    Password
+                    <div>
+                        <i class="fa-solid fa-key"></i>
+                        <input type="text" id="password">
+                    </div>
+                </label>
             </div>
             <a href="#">Forgot your password?</a>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" id="button">
         </form>
     </section>
     <script src="assets/js/main.js"></script>
