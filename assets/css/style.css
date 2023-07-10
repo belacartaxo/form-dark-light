@@ -10,7 +10,8 @@
     --color-purple-100:#a855f7;
     --color-purple-200:#bf46ef;
 
-    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200))
+    --color-gradient1: linear-gradient(90deg, #120529, #180735, #281053);
+    --color-gradient2: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
 }
 *{
     padding: 0;
@@ -24,7 +25,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: var(--color-gradient);
+    background: var(--color-gradient1);
     color: var(--color-dark-100);
     font-size: 14px;
     overflow: hidden;
@@ -112,7 +113,7 @@ section form #button{
     width: 100%;
     height: 33px;
     border-style: none;
-    background: var(--color-gradient);
+    background: var(--color-gradient2);
     color: var(--color-light-50);
     font-size: 15px;
     cursor: pointer;
