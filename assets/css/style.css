@@ -28,7 +28,6 @@ body{
     background: var(--color-gradient1);
     color: var(--color-dark-100);
     font-size: 14px;
-    overflow: hidden;
 }
 
 section{
